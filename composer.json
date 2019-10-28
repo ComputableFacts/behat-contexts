@@ -1,0 +1,25 @@
+{
+    "name": "ComputableFacts/behat-contexts",
+    "description": "Contexts ready to use with Behat.",
+    "keywords": ["Behat", "contexts", "package"],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Patrick Brisacier",
+            "email": "pbrisacier@mncc.fr"
+        }
+    ],
+    "type": "project",
+    "require": {
+		"php": ">=7.1"
+    },
+    "require-dev": {
+		"phpunit/phpunit": "^7.0",
+        "orchestra/testbench": "^3.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "ComputableFacts\\BehatContexts\\": "src/"
+        }
+    }
+}
