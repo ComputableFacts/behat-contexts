@@ -1,5 +1,5 @@
 {
-    "name": "ComputableFacts/behat-contexts",
+    "name": "computablefacts/behat-contexts",
     "description": "Contexts ready to use with Behat.",
     "keywords": ["Behat", "contexts", "package"],
     "license": "Apache-2.0",
