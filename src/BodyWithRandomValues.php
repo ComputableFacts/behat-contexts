@@ -1,4 +1,4 @@
-<?php namespace ComputableFacts\BehatContexts;
+<?php namespace ComputableFacts\Behat\Context;
 
 use Behat\Gherkin\Node\PyStringNode;
 use Illuminate\Support\Str;

@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "ComputableFacts\\BehatContexts\\": "src/"
+            "ComputableFacts\\Behat\\Context\\": "src/"
         }
     }
 }

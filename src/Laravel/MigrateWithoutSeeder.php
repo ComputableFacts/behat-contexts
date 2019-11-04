@@ -1,4 +1,4 @@
-<?php namespace ComputableFacts\BehatContexts\Laravel;
+<?php namespace ComputableFacts\Behat\Context\Laravel;
 
 use Illuminate\Support\Facades\Artisan;
 

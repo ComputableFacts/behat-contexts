@@ -1,6 +1,6 @@
 <?php
 
-use ComputableFacts\BehatContexts\Laravel\MigrateWithoutSeeder;
+use ComputableFacts\Behat\Context\Laravel\MigrateWithoutSeeder;
 use Illuminate\Support\Facades\Artisan;
 
 

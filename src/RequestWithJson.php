@@ -1,4 +1,4 @@
-<?php namespace ComputableFacts\BehatContexts;
+<?php namespace ComputableFacts\Behat\Context;
 
 use Assert\Assertion;
 use Assert\AssertionFailedException as AssertionFailure;
