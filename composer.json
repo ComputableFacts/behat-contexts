@@ -12,8 +12,9 @@
     "type": "project",
     "require": {
 		"php": ">=7.1",
-        "imbo/behat-api-extension": "^2.2",
-        "ext-json": "^1.5"
+        "ext-json": "^1.5",
+        "behat/mink-extension": "^2.3",
+        "imbo/behat-api-extension": "^2.1"
     },
     "require-dev": {
 		"phpunit/phpunit": "^7.0",
