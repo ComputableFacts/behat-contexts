@@ -1,8 +1,13 @@
-<?php
+<?php namespace ComputableFacts\BehatContexts;
 
 use Behat\Gherkin\Node\PyStringNode;
 use Illuminate\Support\Str;
 
+/**
+ * @copyright 2019 ComputableFacts
+ * @license Apache 2.0
+ * @author Patrick Brisacier
+ */
 trait BodyWithRandomValues
 {
 
