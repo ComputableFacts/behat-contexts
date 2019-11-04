@@ -1,4 +1,4 @@
-<?php
+<?php namespace ComputableFacts\BehatContexts;
 
 use Assert\Assertion;
 use Assert\AssertionFailedException as AssertionFailure;
@@ -14,6 +14,11 @@ use Imbo\BehatApiExtension\ArrayContainsComparator\Matcher\RegExp;
 use Imbo\BehatApiExtension\ArrayContainsComparator\Matcher\VariableType;
 use Imbo\BehatApiExtension\Exception\AssertionFailedException;
 
+/**
+ * @copyright 2019 ComputableFacts
+ * @license Apache 2.0
+ * @author Patrick Brisacier
+ */
 trait RequestWithJson
 {
 
