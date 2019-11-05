@@ -193,14 +193,24 @@ class ApiContext extends MinkContext
      */
 
     /**
-     * TODO: When I request :path
+     * @When I request :path
+     * @When I request :path using HTTP :method
      * See: https://behat-api-extension.readthedocs.io/en/latest/guide/send-request.html#when-i-request-path
-     */
-
-    /**
-     * TODO: When I request :path using HTTP :method
      * See: https://behat-api-extension.readthedocs.io/en/latest/guide/send-request.html#when-i-request-path-using-http-method
+     *
+     * @param string $path
+     * @param string $method
      */
+    public function requestPath(string $path, string $method = null) {
+        if (null === $method) {
+            $this->setRequestMethod('GET');
+        } else {
+            $this->setRequestMethod($method);
+        }
+
+        $this->sendRequest($path);
+    }
+
 
     /**
      * @Then the response code is :code
