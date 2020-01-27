@@ -5,6 +5,7 @@ use Assert\AssertionFailedException as AssertionFailure;
 use Behat\Gherkin\Node\PyStringNode;
 use Behat\MinkExtension\Context\MinkContext;
 use ComputableFacts\Behat\Context\JsonDecode;
+use Illuminate\Support\Str;
 use Imbo\BehatApiExtension\Exception\AssertionFailedException;
 use Imbo\BehatApiExtension\ArrayContainsComparator;
 use Imbo\BehatApiExtension\ArrayContainsComparator\Matcher\ArrayLength;
@@ -27,7 +28,8 @@ class ApiContext extends MinkContext
 {
     use JsonDecode;
 
-    private $apiPath = '/api/v1/';
+    private $apiPathRoot = '/api/';
+    private $apiVersion = 'v1';
 
     private $requestMethod;
     private $serverParameters;
@@ -84,16 +86,17 @@ class ApiContext extends MinkContext
      */
     public function getApiPath()
     {
-        return $this->apiPath;
+        return Str::finish($this->apiPathRoot, '/') .
+            Str::finish($this->apiVersion, '/');
     }
 
     /**
-     * apiPath setter
-     * @param string $newApiPath
+     * apiVersion setter
+     * @param string $newVersion
      */
-    public function setApiPath(string $newApiPath)
+    public function setApiVersion(string $newVersion)
     {
-        $this->apiPath = $newApiPath;
+        $this->apiVersion = $newVersion;
     }
 
     /**
@@ -485,7 +488,7 @@ class ApiContext extends MinkContext
      */
     protected function getApiUrl($path): string
     {
-        return $this->apiPath . $path;
+        return $this->getApiPath() . $path;
     }
 
     /**
