@@ -71,10 +71,12 @@ class ApiContext extends MinkContext
      * context constructor through behat.yml.
      *
      * @param bool $printResponse
+     * @param string $apiVersion
      */
-    public function __construct($printResponse = false)
+    public function __construct($printResponse = false, $apiVersion = 'v1')
     {
         $this->printResponse = $printResponse;
+        $this->apiVersion = $apiVersion;
         $this->requestMethod = 'GET';
         $this->serverParameters = array();
         $this->requestBody = null;
