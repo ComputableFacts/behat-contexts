@@ -19,7 +19,6 @@ trait ApiWithTokenFromUsers
     {
         $user = User::whereEmail($email)->firstOrFail();
         $token = $user->tokens->first();
-        Auth::setUser($user);
 
         $this->apiToken = $token->token;
     }
