@@ -30,7 +30,6 @@ trait ApiWithTokenFromAutomaticUserCreation
         $apiUser = factory(User::class)->create();
         $token = factory(Token::class)->make();
         $apiUser->tokens()->save($token);
-        Auth::setUser($apiUser);
 
         $this->apiToken = $token->token;
     }
