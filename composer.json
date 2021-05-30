@@ -13,7 +13,7 @@
     "require": {
 		"php": ">=7.1",
         "ext-json": "*",
-        "behat/mink-extension": "^2.4",
+        "behat/mink-extension": "^2.3",
         "imbo/behat-api-extension": "^2.3"
     },
     "require-dev": {
